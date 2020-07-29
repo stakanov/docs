@@ -439,7 +439,7 @@ A Tasmota MQTT RESULT message invokes the script's `E` section. Add `print` stat
 Subroutines end with the next `#` or `>` line or break. Subroutines may be nested  
 Parameters can be numbers or strings and on type mismatch are converted  
 
-If `#define USE_SCRIPT_SUB_COMMAND` is included in your `user_config_override.h`, a subroutine may be invoked via the Console or MQTT using the subroutine's name. For example, a declared subroutine `#SETLED(num)` may be invoked by typing `SETLED 1` in the Console. The parameter `1` is passed into the `num` argument. This also works with string parameters.  
+If `#define USE_SCRIPT_SUB_COMMAND` is included in your `user_config_override.h`, a subroutine may be invoked via the Console or MQTT using the subroutine's name. For example, a declared subroutine `#SETLED(num)` may be invoked by typing `SETLED0 1` in the Console. The parameter `1` is passed into the `num` argument. This also works with string parameters. *Remember to add 0 after the routine name!*
 
 It is possible to "replace" internal Tasmota commands. For example, if a `#POWER1(num)` subroutine is declared, the command `POWER1` is processed in the scripter instead of in the main Tasmota code.  
 
